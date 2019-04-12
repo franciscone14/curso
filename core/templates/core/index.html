@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <h1>Isso aqui ta no index</h1>
+    {% if produtos %}
+        {% for p in produtos %}
+            <span>{{p.descricao}}<span>
+            <span>{{p.preco}}<span>
+        {% endfor %}
+    {% endif %}
+{% endblock content %}

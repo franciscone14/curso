@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <h6>Criar nova conta</h6>
+    {% if message %}
+        <h4>{{ message }}</h4>
+    {% endif %}
+    {% if form %}
+        <form method="POST" action="{% url 'novo-cliente' %}">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Salvar</button>
+        </form>
+    {% endif %}
+{% endblock content %}
